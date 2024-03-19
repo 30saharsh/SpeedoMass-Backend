@@ -5,7 +5,10 @@ const app = express();
 const PORT = process.env.PORT;
 
 const cors = require("cors");
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:3000'
+}));
+
 
 
 require("./Models/database").connectDatabase();
